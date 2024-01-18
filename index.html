@@ -5,38 +5,31 @@
             * {
                 box-sizing: border-box;
             }
-            body {
-                color: red;
-                border: 20px solid blue;
-            }
-            h1 {
-                text-align: center;
-            }
-            h2 {
-                margin: 0;
-                color: black;
-            }
-            p {
-                margin: 0;
-            }
-            div {
-                border: 1px solid black;
-                padding: 10px;
-            }
+
             img {
-                width: 100%;
-                max-width: 1000px;
-                border: 10px solid purple;
+                width: 100px;
             }
         </style>
     </head>
     <body>
-        <h1>Meu Título</h1>
         <div>
-            <h2>Subtítulo</h2>
-            <p>Um parágrafo.</p>
-            <p>Um parágrafo.</p>
+            <img id="on" src="on.jpg" alt="">
+            <img id="off" src="off.jpg" alt="">
         </div>
-        <img src="dog.webp" alt="Dog">
+        <button onclick="ligue()">Ligar</button>
+        <button onclick="desligue()">Desligar</button>
+        <script>
+            function ligue() {
+                document.getElementById("off").style.display = 'none'
+                document.getElementById("on").style.display = ''
+            }
+
+            function desligue() {
+                document.getElementById("off").style.display = ''
+                document.getElementById("on").style.display = 'none'
+            }
+
+            document.getElementById("on").style.display = 'none'
+        </script>
     </body>
 </html>
